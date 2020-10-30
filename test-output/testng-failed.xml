@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [SAP Sign Up Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.sap.reports.TestListener"/>
+  </listeners>
+  <test thread-count="3" name="FireFox Sign Up test(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.sap.testcases.SignUpTest">
+        <methods>
+          <include name="triggerDependency"/>
+          <include name="cookies"/>
+          <include name="verifySuccessMsg"/>
+          <include name="clickSignUpBtn"/>
+          <include name="setUp"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.sap.testcases.SignUpTest -->
+    </classes>
+  </test> <!-- FireFox Sign Up test(failed) -->
+</suite> <!-- Failed suite [SAP Sign Up Suite] -->
